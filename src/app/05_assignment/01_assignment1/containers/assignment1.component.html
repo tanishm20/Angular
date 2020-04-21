@@ -1,0 +1,31 @@
+<div class="assignment1">
+  <div class="alert alert-info">Follow the steps:</div>
+  <ul class="list-group">
+    <li class="list-group-item">Create an input of type "text"</li>
+    <li class="list-group-item">Attach a template reference variable to the input</li>
+    <li class="list-group-item">Attach an "input" event passing in the value of textbox to the handler</li>
+    <li class="list-group-item">Create handler in the component's class</li>
+    <li class="list-group-item">Display the result on the page via string interpolation</li>
+  </ul>
+  <div class="container your-code">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Input</span>
+      </div>
+      <input placeholder="Enter Input" 
+      #myInput
+      (input)="Input(myInput.value)"
+      type="text" 
+      class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="alert alert-success" *ngIf="userInput && userInput.length > 0; else noinput" role="alert">
+      {{userInput}}
+    </div>
+  </div>
+</div>
+
+<ng-template #noinput>
+  <div class="alert alert-danger" role="alert">
+   Please Enter Something
+  </div>
+</ng-template>
