@@ -2,7 +2,9 @@
   margin-top: 40px;
   border: 2px solid darkmagenta;
 }
-
+.active {
+  background-color: lightblue;
+}
 table {
   width:100%;
 }
@@ -13,14 +15,6 @@ form,table, th, td {
 form,th, td {
   padding: 15px;
   text-align: left;
-}
-table tr:nth-child(even) {
-  background-color: #eee;
-  color: black;
-}
-table tr:nth-child(odd) {
- background-color: #fff;
- color: black;
 }
 table th {
   background-color: black;

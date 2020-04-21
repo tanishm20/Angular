@@ -8,13 +8,13 @@ import { Todo } from '../../assignment.component';
 })
 export class Assignment2Component {
 
+  
   @Input()
   todos: Todo[];
 
-  todo: Todo;
+  row: Todo;
 
   Todo(todo: Todo){
-    this.todo = todo;
+    this.row = todo;
   }
-
 }
